@@ -4,3 +4,5 @@ config/deploy.rb
 log
 tmp
 themes/*
+.svn
+.svn/*
