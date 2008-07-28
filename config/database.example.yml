@@ -14,7 +14,7 @@ development:
   adapter: mysql
   database: mephisto_development
   username: root
-  password: trinity
+  password: 
   host: localhost
   encoding: utf8
 
@@ -25,7 +25,7 @@ test:
   adapter: mysql
   database: mephisto_test
   username: root
-  password: trinity
+  password: 
   host: localhost
   encoding: utf8
 
@@ -33,6 +33,6 @@ production:
   adapter: mysql
   database: mephisto_production
   username: root
-  password: trinity
+  password: 
   host: localhost
   encoding: utf8
