@@ -8,6 +8,8 @@
 #require 'ruby-debug'
 #Debugger.start
 
+RAILS_GEM_VERSION = '2.0.1'
+
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 require File.join(File.dirname(__FILE__), '../vendor/plugins/engines/boot')
