@@ -1,1 +1,2 @@
 page.insert_html :bottom, 'attached-assets', :partial => 'admin/assets/widget', :object => @asset, :locals => { :prefix => 'attached' }
+page.call "Flash.notice", "Asset : #{@asset.filename} has been attached to this page!"

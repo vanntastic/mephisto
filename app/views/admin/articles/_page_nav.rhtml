@@ -12,7 +12,10 @@
       :url => { :controller => 'admin/comments', :action => 'close', :id => @article } %></li>
   <% end -%>
   <% if controller.action_name == 'edit' -%>
-    <li><%= link_to('Preview', {:action => 'show', :id => @article}, {:target => '_blank'}) %></li>
+    <li>
+      <%= link_to('Preview', {:action => 'show', :id => @article},
+          :target => "_blank") %>
+    </li>
   <% end -%>
     <li id="select">
       <a class="trigger" id="cog" href="#">&nbsp;</a>

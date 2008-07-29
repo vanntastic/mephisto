@@ -701,6 +701,7 @@ ul.stabs li a:hover {
 
 #tab-search a { background: url(/images/mephisto/icons/magnify.png) 3px 50% no-repeat; }
 #tab-files a  { background: url(/images/mephisto/icons/updark.png) 3px 5px no-repeat; }
+#tab-attached a { background: url(/images/mephisto/icons/thumbs.png) 3px 5px no-repeat; }
 #tab-latest a { background: url(/images/mephisto/icons/thumbs.png) 3px 5px no-repeat; }
 #tab-bucket a { background: url(/images/mephisto/icons/bucket.png) 3px 5px no-repeat; }
 

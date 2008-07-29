@@ -609,7 +609,12 @@ Event.addBehavior({
     var pieces = img.src.split('/');
     new Dialog.Rjs();
     new Ajax.Request(Mephisto.root + '/admin/themes/show/' + pieces[pieces.length-1]);
-  }
+  },
+  
+  // 'a.preview-link:click': function() {
+  //   new Dialog.Rjs();
+  //   new Ajax.Request(Mephisto.root + '/admin/articles/' + this.rel);
+  // }
   
   //'.theme': function() {
   //  new ToolBox(this);

@@ -1,0 +1,1 @@
+page.call "Flash.notice", "Asset : #{@asset.filename} has been detached from this page!"
