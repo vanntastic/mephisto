@@ -40,13 +40,16 @@
       <input type="button" value="Search" onclick="TinyTab.callbacks['search-files']($F('search-files-q'))" />
       <ul id="search-assets" class="asset-list"></ul>
     </div>
+    
     <div class="tabpanel" id="upload-files" style="display:none;">
+      <!-- this doesn't work on the edit action -->
       <p>
         <strong>1.</strong>
         <%= file_field_tag 'asset[uploaded_data]', :size => 15, :id => 'asset_uploaded_data' %>
       </p>
       <p><strong>2.</strong> <input type="button" value="Upload" onclick="Asset.upload('article-form');" /></p>
     </div>
+    
     <div class="tabpanel" id="bucket" style="display:none;">
       <ul id="bucket-assets" class="asset-list">
         <%= render :partial => "admin/assets/widget", :collection => @bucket_assets, :locals => { :prefix => 'bucket' } %>

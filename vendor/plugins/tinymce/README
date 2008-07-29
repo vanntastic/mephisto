@@ -1,0 +1,26 @@
+TinyMCE Rails Plugin
+========
+
+The Tiny MCE Plugin will allow you to easily add in the tiny mce editor 
+(http://tinymce.moxiecode.com/) into any of your rails apps.
+
+USAGE AND INSTALLATION
+======================
+
+1. rake tinymce:install
+2. Put <%= include_tiny_mce {:options} %> somewhere in your layout or view file, preferably in your <head> section
+
+== CONFIGURATION OPTIONS
+
+A list of configuration options can be viewed at: 
+  http://wiki.moxiecode.com/index.php/TinyMCE:Configuration#General
+
+
+- :mode # defaults to 'specific_textareas'
+- :class # defaults to 'editor'
+- :theme # defaults to 'advanced'
+- :convert_urls # defaults to false
+- :fonts # defaults to standard serif/sans-serif fonts
+- :text_colors # defaults to standard primary colors
+- :buttons # defaults to standard font buttons
+- :toolbar_location # defaults to 'top'

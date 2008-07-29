@@ -7,6 +7,7 @@
     <%= stylesheet_link_tag 'mephisto/mephisto' %>
     <%= javascript_include_tag 'mephisto/prototype', 'mephisto/effects', 'mephisto/dragdrop', 'mephisto/lowpro', 'mephisto/application' %>
     <script type="text/javascript">Mephisto.root = '<%= ActionController::AbstractRequest.relative_url_root %>';</script>
+    <%= include_tiny_mce %>
     <%= yield :head %>
   </head>
   <body>
