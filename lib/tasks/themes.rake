@@ -6,7 +6,7 @@ namespace :themes do
   task :create do
     instantiator
     
-    if ENV['NAME'].nil?
+    if ENV['NAME'].blank?
       
       puts "USAGE : rake themes:create NAME='name_of_theme' SITE=['site-1']"
       
@@ -32,8 +32,10 @@ namespace :themes do
         file << "summary: This is a theme for #{ENV['NAME']}"
       end
       
-      puts "All Done... you can start rewriting the theme now..."
-      
+      puts "Theme : #{ENV['NAME']} has been created!"
+      puts "You can start rewriting the theme now..."
+      layout_file = File.join(@new_theme_path,'layouts/layout.liquid')
+      system("mate #{layout_file}") if system("mate")
     end
     
   end
@@ -42,11 +44,12 @@ namespace :themes do
   task :destroy do
     instantiator
     
-    if ENV['NAME'].nil?
+    if ENV['NAME'].blank?
       puts "USAGE : rake themes:destroy NAME='name_of_theme'"
     else
-      put_not_found = puts("The path : #{@new_theme_path} doesn't exist")
-      File.exists?(@new_theme_path) ? FileUtils.rm_r(@new_theme_path) : put_not_found
+      not_found = "The path : #{@new_theme_path} doesn't exist"
+      File.exists?(@new_theme_path) ? FileUtils.rm_r(@new_theme_path) : puts(not_found)
+      puts("The theme : #{ENV['NAME']} has been removed!")
     end
     
   end
@@ -55,6 +58,7 @@ end
 
 def instantiator
   ENV['SITE'] ||= "site-1"
+  ENV['NAME'] ||= ""
   
   @theme_path = File.join(RAILS_ROOT, "themes")
   @default_template = File.join(@theme_path,"default")
@@ -62,3 +66,6 @@ def instantiator
   @new_theme_path = File.join(@site_path, ENV['NAME'])
   @about_yml = File.join(@new_theme_path, "about.yml")
 end
+
+# i like String#blank?, so let's use it again
+class String; def blank?; self.strip.length == 0; end; end
