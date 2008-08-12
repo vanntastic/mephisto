@@ -31,7 +31,9 @@
         <%= render :partial => "admin/assets/widget", :collection => @article.assets, :locals => { :prefix => 'attached' } %>
       </ul>
     </div>
+    
     <div class="tabpanel" id="search-files" style="display:none;">
+      <!-- FIX : this doesn't work for rails 2.0.1 -->
       <label for="q" style="font-weight:bold;padding: 5px 0;">
         Search by tag or title 
         <img id="spinner" src="/images/mephisto/spinner.gif" alt="spinner" style="display:none;vertical-align: middle" />

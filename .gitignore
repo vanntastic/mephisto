@@ -6,3 +6,5 @@ tmp
 themes/*
 .svn
 .svn/*
+public/assets
+public/assets/*
